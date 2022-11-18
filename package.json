@@ -1,0 +1,21 @@
+{
+    "name": "create-landing-page",
+    "version": "1.0.0",
+    "description": "Default folder structure for create landing page using tailwindcss",
+    "main": "src/index.html",
+    "scripts": {
+        "dev": "npx concurrently --kill-others \"npx tailwindcss -i src/css/_style.css -o src/css/style.css --watch\" \"node server\"",
+        "build": "rm -rf dist && mkdir dist && mkdir dist/css && npx minify src/index.html > dist/index.html && npx minify src/css/style.css > dist/css/style.css && cp -r src/assets dist"
+    },
+    "keywords": [],
+    "author": "thoanngo2 <thomas@dtn.com.vn>",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "concurrently": "^7.5.0",
+        "live-server": "^1.2.2",
+        "minify": "^9.1.0",
+        "prettier": "^2.7.1",
+        "prettier-plugin-tailwindcss": "^0.1.13",
+        "tailwindcss": "^3.2.4"
+    }
+}
