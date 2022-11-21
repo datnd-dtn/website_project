@@ -3,29 +3,23 @@
 ## Intall
 
 <p>
-    <pre>
-        <code>
-            npm install
-        </code>
-    </pre>
+    <pre><code>git clone https://github.com/thoanngo2/create-landing-page.git<br/>cd create-landing-page<br/>npm install</code></pre>
 </p>
 
 ## Develop
 
 <p>
-    <pre>
-        <code>
-            npm run dev
-        </code>
-    </pre>
+    <pre><code>npm run dev</code></pre>
 </p>
 
 ## Deploy
 
 <p>
-    <pre>
-        <code>
-            npm run build
-        </code>
-    </pre>
+    <pre><code>npm run build</code></pre>
+</p>
+
+## Format Code
+
+<p>
+    <pre><code>npm run prettier</code></pre>
 </p>

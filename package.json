@@ -5,7 +5,8 @@
     "main": "src/index.html",
     "scripts": {
         "dev": "npx concurrently --kill-others \"npx tailwindcss -i src/css/_style.css -o src/css/style.css --watch\" \"node server\"",
-        "build": "rm -rf dist && mkdir dist && mkdir dist/css && npx minify src/index.html > dist/index.html && npx minify src/css/style.css > dist/css/style.css && cp -r src/assets dist"
+        "build": "rm -rf dist && mkdir dist && mkdir dist/css && npx minify src/index.html > dist/index.html && npx minify src/css/style.css > dist/css/style.css && cp -r src/assets dist",
+        "prettier": "npx prettier --write src"
     },
     "keywords": [],
     "author": "thoanngo2 <thomas@dtn.com.vn>",
