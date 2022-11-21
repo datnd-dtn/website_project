@@ -3,7 +3,9 @@
 ## Intall
 
 <p>
-    <pre><code>git clone https://github.com/thoanngo2/create-landing-page.git<br/>cd create-landing-page<br/>npm install</code></pre>
+    <pre><code>git clone https://github.com/thoanngo2/create-landing-page.git
+cd create-landing-page
+npm install</code></pre>
 </p>
 
 ## Develop
