@@ -1,6 +1,6 @@
 # CREATE LANDING PAGE USING TAILWINDCSS
 
-## Intall
+## Install
 
 <p>
     <pre><code>git clone https://github.com/thoanngo2/create-landing-page.git
