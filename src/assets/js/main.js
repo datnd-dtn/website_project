@@ -9,10 +9,10 @@ if(dropdownButton) {
         dropdownList.classList.toggle('hidden');
         if (toggle === true) {
             iconMenu.src =
-                'https://cdn-icons-png.flaticon.com/512/5358/5358649.png';
+                '../assets/images/bai2/hamburger-menu.svg';
         } else {
             iconMenu.src =
-                'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png';
+                '../assets/images/bai2/icon-close.svg'
         }
         toggle = !toggle;
     });
@@ -70,4 +70,29 @@ iconClose.addEventListener('click', () => {
 });
 
 
+// ---------------------tabs-----------------
+var tabLinks = document.querySelectorAll(".tablinks");
+var tabContent =document.querySelectorAll(".tabcontent");
 
+tabLinks.forEach(function(el) {
+   el.addEventListener("click", openTabs);
+});
+
+function openTabs(el) {
+    var btn = el.currentTarget;
+    var electronic = btn.dataset.electronic;
+    tabContent.forEach(function(el) {
+        console.log(el);
+       el.classList.remove("active");
+       el.classList.add("hidden")
+    });
+ 
+    tabLinks.forEach(function(el) {
+       el.classList.remove("grid");
+    });
+ 
+    document.querySelector("#" + electronic).classList.add("active");
+    document.querySelector("#" + electronic).classList.remove("hidden");
+    
+    btn.classList.add("grid");
+ }
