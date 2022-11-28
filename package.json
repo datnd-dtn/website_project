@@ -1,5 +1,5 @@
 {
-    "name": "create-landing-page",
+    "name": "website-project",
     "version": "1.0.0",
     "description": "Default folder structure for create landing page using tailwindcss",
     "main": "src/index.html",
@@ -9,7 +9,7 @@
         "prettier": "npx prettier --write src"
     },
     "keywords": [],
-    "author": "thoanngo2 <thomas@dtn.com.vn>",
+    "author": "datdtn",
     "license": "UNLICENSED",
     "devDependencies": {
         "concurrently": "^7.5.0",

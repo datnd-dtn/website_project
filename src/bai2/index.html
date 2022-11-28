@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bai 2</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <div class="container mx-auto">
+            <header class="relative flex justify-between px-4 py-8 sm:px-0">
+                <div class="flex">
+                    <div class="mr-20">
+                        <img
+                            src="../assets/images/bai2/logo.svg"
+                            alt="shortly"
+                        />
+                    </div>
+                    <ul class="items-center hidden text-gray-400 lg:flex">
+                        <li class="px-6"><a href="#" class="font-bold hover:text-black">Feature</a></li>
+                        <li class="px-6"><a href="#" class="font-bold hover:text-black">Pricing</a></li>
+                        <li class="px-6"><a href="#" class="font-bold hover:text-black">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:block">
+                    <a href="#" class="px-6 py-3 text-gray-400">Login</a>
+                    <a href="#" class="px-6 btn-get-started">Sign up</a>
+                </div>
+                <div class="w-6 h-6 lg:hidden" id="dropdown">
+                    <img
+                        class="block object-cover w-full"
+                        id="icon-menu"
+                        src="https://cdn-icons-png.flaticon.com/512/5358/5358649.png"
+                        alt=""
+                    />
+                </div>
+                <div
+                    class="absolute top-full left-[50%] hidden w-5/6 translate-x-[-50%] rounded-lg bg-[#3B3054] px-5 py-5 text-center text-white lg:hidden"
+                >
+                    <ul class="border-b rounded-blue-300">
+                        <li class="py-3 sm:py-4"><a href="#">Feature</a></li>
+                        <li class="py-3 sm:py-4"><a href="#">Pricing</a></li>
+                        <li class="py-3 sm:py-4"><a href="#">Resources</a></li>
+                    </ul>
+                    <a href="#" class="block py-3 sm:py-4">Login</a>
+                    <a href="#" class="block btn-get-started">Sign up</a>
+                </div>
+            </header>
+        </div>
+        <div class="container pb-20 mx-auto">
+            <div
+                class="flex flex-col-reverse items-center justify-between px-4 py-10 sm:px-0 lg:flex-row lg:py-14"
+            >
+                <div class="max-w-md text-center lg:text-left">
+                    <h2 class="mb-4 text-3xl font-bold sm:text-6xl md:mb-10">
+                        More than just shorter links
+                    </h2>
+                    <p class="mb-6 text-gray-400">
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s
+                    </p>
+                    <button class="btn-get-started">Get Started</button>
+                </div>
+                <div class="mb-14 lg:mb-0">
+                    <img
+                        src="../assets/images/bai2/illustration-working.svg"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="bg-[#F3F4F6] px-4 sm:px-0 left-0 right-0 pb-10">
+            <div class="container relative mx-auto">
+                <form
+                    id="form-short-link"
+                    class="mt-[-40px] mb-6 w-full flex-col rounded-lg bg-[#3B3054] px-6 py-6 sm:py-10 sm:px-10 md:flex-row absolute -top-8"
+                >
+                    <div class="flex flex-col mb-2 md:flex-row">
+                        <input
+                            id="input-url"
+                            oninput="isValidHttpUrl(this.value)"
+                            onkeydown="isValidHttpUrl(this.value)"
+                            type="text"
+                            placeholder="shorten a link  here"
+                            class="inline-block px-3 py-3 mb-4 mr-0 placeholder-orange-500 outline-none basis-4/5 rounded-xl sm:px-4 sm:py-4 md:mr-4 md:mb-0"
+                        />
+                        <button
+                            type="submit"
+                            class="basis-1/5 rounded-xl bg-[#2ACFCF] px-3 py-3 text-white sm:py-4 sm:px-4 btn-copy"
+                        >
+                            Shorten It!
+                        </button>
+                    </div>
+                    <p class="text-center md:text-left d-block w= text-red-600 hidden italic" id="error-valid"></p>
+                </form>
+                <div class="pt-40">
+                    <div
+                        class="flex flex-col items-center justify-between px-6 py-6 mb-4 bg-white rounded-lg shadow-lg md:flex-row"
+                    >
+                        <p
+                            class="inline-block max-w-full mb-4 overflow-x-scroll font-bold md:mb-0"
+                        >
+                            https://tailwindcss.com/docs/top-right-bottom-left
+                        </p>
+                        <div class="flex flex-col items-center md:flex-row">
+                            <p
+                                class="mr-4 mb-4 font-bold text-[#2ACFCF] md:mb-0"
+                            >
+                                shorturl.at/bdqs3
+                            </p>
+                            <button class="btn-copy">Copy</button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-between px-6 py-6 mb-4 bg-white rounded-lg shadow-lg md:flex-row"
+                    >
+                        <p
+                            class="inline-block max-w-full mb-4 overflow-x-scroll font-bold md:mb-0"
+                        >
+                            https://tailwindcss.com/docs/top-right-bottom-left
+                        </p>
+                        <div class="flex flex-col items-center md:flex-row">
+                            <p
+                                class="mr-4 mb-4 font-bold text-[#2ACFCF] md:mb-0"
+                            >
+                                shorturl.at/bdqs3
+                            </p>
+                            <button class="btn-copy">Copy</button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-between px-6 py-6 bg-white rounded-lg shadow-lg md:flex-row"
+                    >
+                        <p
+                            class="inline-block max-w-full mb-4 overflow-x-scroll font-bold md:mb-0"
+                        >
+                            https://tailwindcss.com/docs/top-right-bottom-left
+                        </p>
+                        <div class="flex flex-col items-center md:flex-row">
+                            <p
+                                class="mr-4 mb-4 font-bold text-[#2ACFCF] md:mb-0"
+                            >
+                                shorturl.at/bdqs3
+                            </p>
+                            <button class="btn-copy">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container px-4 py-20 mx-auto text-center sm:px-0">
+                <h3 class="mb-4 text-3xl font-medium">Advanded Statistics</h3>
+                <p class="inline-block max-w-md text-gray-400">
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s
+                </p>
+                <div class="grid grid-cols-1 gap-10 mt-20 md:grid-cols-3">
+                    <div
+                        class="relative w-full px-6 pt-20 pb-6 bg-white border rounded-lg shadow-md"
+                    >
+                        <h4 class="mb-6 text-lg font-bold text-left">
+                            fsdfsdf
+                        </h4>
+                        <p class="text-left">
+                            Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s, when an unknown printer
+                            took a galley of type and scrambled it
+                        </p>
+                        <div
+                            class="absolute left-2/4 top-[-38px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%]"
+                        >
+                            <img
+                                src="../assets/images/bai2/icon-brand-recognition.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="relative w-full px-6 pt-20 pb-6 mt-10 bg-white border rounded-lg shadow-md before-line after-line"
+                    >
+                        <h4 class="mb-6 text-lg font-bold text-left">
+                            fsdfsdf
+                        </h4>
+                        <p class="text-left">
+                            Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s, when an unknown printer
+                            took a galley of type and scrambled it
+                        </p>
+                        <div
+                            class="absolute left-2/4 top-[-38px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%]"
+                        >
+                            <img
+                                src="../assets/images/bai2/icon-detailed-records.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div
+                        class="relative w-full px-6 pt-20 pb-6 mt-20 bg-white border rounded-lg shadow-md"
+                    >
+                        <h4 class="mb-6 text-lg font-bold text-left">
+                            fsdfsdf
+                        </h4>
+                        <p class="text-left">
+                            Lorem Ipsum has been the industry's standard dummy
+                            text ever since the 1500s, when an unknown printer
+                            took a galley of type and scrambled it
+                        </p>
+                        <div
+                            class="absolute left-2/4 top-[-38px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%]"
+                        >
+                            <img
+                                src="../assets/images/bai2/icon-fully-customizable.svg"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="flex w-full flex-col items-center justify-center bg-[#3B3054] bg-[url('../assets/images/bai2/bg-boost-desktop.svg')] bg-cover bg-no-repeat py-14 text-center md:py-32"
+        >
+            <p class="mb-8 text-2xl font-bold text-white sm:text-5xl">
+                Boost your links today
+            </p>
+            <button class="btn-get-started">Get Started</button>
+        </div>
+        <div class="bg-[#232127] py-16 text-white">
+            <div
+                class="container flex flex-col items-center justify-between mx-auto md:items-start md:flex-row"
+            >
+                <div class="mb-10 md:mb-0">
+                    <img src="../assets/images/bai2/logo.svg" alt="" />
+                </div>
+                <div class="flex flex-col mb-10 md:mb-0 md:flex-row">
+                    <ul class="px-6 mb-10 text-center md:mb-0 lg:px-14 md:text-left">
+                        <li class="mb-4 font-bold"><h5>Features</h5></li>
+                        <li class="item-footer">
+                            <a href="#">Link</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Shortenting</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Brandaci</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Links</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Analytics</a>
+                        </li>
+                    </ul>
+                    <ul class="px-6 mb-10 text-center md:mb-0 lg:px-14 md:text-left">
+                        <li class="mb-4 font-bold"><h5>Resources</h5></li>
+                        <li class="item-footer">
+                            <a href="#">BLog</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Developer</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Support</a>
+                        </li>
+                    </ul>
+                    <ul class="px-8 mb-10 text-center md:mb-0 lg:px-14 md:text-left">
+                        <li class="mb-4 font-bold"><h5>Company</h5></li>
+                        <li class="item-footer">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Our team</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Carees</a>
+                        </li>
+                        <li class="item-footer">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="flex">
+                    <li class="ml-6">
+                        <a href="#" class="w-fit"
+                            ><img
+                                class="object-cover"
+                                src="../assets/images/bai2/icon-facebook.svg"
+                                alt=""
+                        /></a>
+                    </li>
+                    <li class="ml-6">
+                        <a href="#" class="w-fit"
+                            ><img
+                                class="object-cover"
+                                src="../assets/images/bai2/icon-twitter.svg"
+                                alt=""
+                        /></a>
+                    </li>
+                    <li class="ml-6">
+                        <a href="#" class="w-fit"
+                            ><img
+                                class="object-cover"
+                                src="../assets/images/bai2/icon-pinterest.svg"
+                                alt=""
+                        /></a>
+                    </li>
+                    <li class="ml-6">
+                        <a href="#" class="w-fit"
+                            ><img
+                                class="object-cover"
+                                src="../assets/images/bai2/icon-instagram.svg"
+                                alt=""
+                        /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="../assets/js/main.js"></script>
+    </body>
+</html>

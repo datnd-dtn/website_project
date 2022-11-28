@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    /* ========bai1=========== */
+    .btn-green {
+        @apply bg-[#26BAA4] text-white rounded-full px-10 py-4 inline-block shadow-md hover:opacity-80 transition-all;
+    }
+    .btn-blue {
+        @apply bg-[#6173FF] text-white rounded-full px-10 py-4 inline-block shadow-md hover:opacity-80 transition-all;
+    }
+    .title {
+        @apply text-5xl text-[#4A5058] mb-6
+    }
+    /* ========bai2=========== */
+    .btn-get-started {
+        @apply bg-[#2ACFCF] px-12 py-3 rounded-full text-white font-bold hover:opacity-80
+    }
+    .before-line::before {
+        @apply absolute -z-10 w-full bg-[#2ACFCF] py-1 md:py-2 content-[''] top-64 sm:top-10 max-[339px]:top-80 max-[640px]:top-52 md:top-20 md:left-20 md:rotate-0 rotate-90 left-0 translate-y-[-50%]
+    }
+    .after-line::after {
+        @apply absolute md:-left-20 top-2  md:top-20 -z-10 w-full bg-[#2ACFCF] py-1 md:py-2 content-[''] md:rotate-0 rotate-90 translate-y-[-50%] left-0
+    }
+    .btn-copy {
+        @apply bg-[#2ACFCF] px-6 py-2 text-white rounded-lg active:bg-[#3B3054] hover:opacity-80
+    }
+    .item-footer {
+        @apply py-2 text-gray-400 hover:text-[#2ACFCF]
+    }
+    /* ========bai3=========== */
+    .item-menu {
+        @apply inline-block px-6 py-2 text-gray-500 uppercase hover:text-red-400
+    }
+
+  }
