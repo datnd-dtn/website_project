@@ -50,6 +50,9 @@
            @apply after:content-[''] after:w-4 after:h-4 after:bg-[url('../assets/images/bai3/icon-arrow.svg')] after:bg-no-repeat after:bg-contain after:inline-block after:absolute relative after:right-0 w-full inline-block after:top-2/4 after:translate-y-[-50%] 
     }
     .active {
-        @apply border-red-300 text-red-400
+        @apply block
+    }
+    .title-section {
+        @apply mb-6 text-3xl md:text-4xl font-bold text-center
     }
   }

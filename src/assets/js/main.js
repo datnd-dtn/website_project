@@ -1,5 +1,6 @@
 console.log('Application running.');
-// ================Toggle-menu-bai2====================
+// ================bai2====================
+// --------------------Toggle-menu-----------------------
 const dropdownButton = document.querySelector('#dropdown');
 const iconMenu = document.querySelector('#icon-menu');
 const dropdownList = document.querySelector('#dropdown + div.hidden');
@@ -50,7 +51,8 @@ function isValidHttpUrl(string) {
     return url.protocol === "http:" || url.protocol === "https:";
 }
 
-// ================Toggle-menu-bai3====================
+// ================bai3====================
+// ---------------------Toggle-menu-----------------------
 const menuHamburger = document.querySelector('#menu-hamburger');
 const logo = document.querySelector('#logo');
 const navMenu = document.querySelector('#menu-hamburger + div.hidden');
@@ -88,11 +90,42 @@ function openTabs(el) {
     });
  
     tabLinks.forEach(function(el) {
-       el.classList.remove("grid");
+       el.classList.remove("active");
     });
  
     document.querySelector("#" + electronic).classList.add("active");
     document.querySelector("#" + electronic).classList.remove("hidden");
     
-    btn.classList.add("grid");
+    btn.classList.add("active");
  }
+//  ---------------------collapsible-----------------
+
+    var accordionLinks = document.querySelectorAll(".accordion-toggle");
+    var accordionContent = document.querySelectorAll(".accordion-content");
+    accordionLinks.forEach(function(el) {
+        el.addEventListener("click", handleAccordion);
+     });
+
+    function handleAccordion(el) {
+        var accordionLink = el.currentTarget;
+        var accordion = accordionLink.dataset.accordion;
+        console.log('ss', accordionLink);
+        accordionLink.querySelector(".icon-arrow").classList.toggle("rotate-arrow");
+
+        accordionContent.forEach(function(el) {
+            if(el.classList.contains("hidden")) {
+                el.classList.add("hidden")
+            }
+            else {
+                el.classList.remove("hidden")
+            }
+        });
+        accordionLinks.forEach(function(el) {
+            el.classList.remove("active");
+         });
+
+         document.querySelector("#" + accordion).classList.toggle("hidden");
+    }
+
+
+
