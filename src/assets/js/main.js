@@ -10,10 +10,10 @@ if(dropdownButton) {
         dropdownList.classList.toggle('hidden');
         if (toggle === true) {
             iconMenu.src =
-                '../assets/images/bai2/hamburger-menu.svg';
+                'assets/images/bai2/hamburger-menu.svg';
         } else {
             iconMenu.src =
-                '../assets/images/bai2/icon-close.svg'
+                'assets/images/bai2/icon-close.svg'
         }
         toggle = !toggle;
     });
