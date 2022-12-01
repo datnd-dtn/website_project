@@ -24,12 +24,6 @@
     .after-line {
         @apply absolute md:-right-0 bottom-2/4 max-[460px]:bottom-80 md:top-32 z-10 w-full h-2 md:h-4 bg-[#2ACFCF] py-1 md:rotate-0 rotate-90 translate-y-[-50%] left-0
     }
-    /* .before-line::before {
-        @apply absolute z-10 w-full bg-[#2ACFCF] py-1 md:py-2 content-[''] top-64 sm:top-10 max-[339px]:top-80 max-[640px]:top-52 md:top-20 md:left-20 md:rotate-0 rotate-90 left-0 translate-y-[-50%]
-    }
-    .after-line::after {
-        @apply absolute md:-left-20 top-2  md:top-20 z-10 w-full bg-[#2ACFCF] py-1 md:py-2 content-[''] md:rotate-0 rotate-90 translate-y-[-50%] left-0
-    } */
     .btn-copy {
         @apply bg-[#2ACFCF] px-6 py-2 text-white rounded-lg active:bg-[#3B3054] hover:opacity-80
     }
