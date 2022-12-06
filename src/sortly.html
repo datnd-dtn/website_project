@@ -8,28 +8,39 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <div class="container mx-auto">
+        <div class="container">
             <header class="relative flex justify-between px-4 py-8 sm:px-0">
                 <div class="flex">
                     <div class="mr-20">
-                        <img
-                            src="assets/images/bai2/logo.svg"
-                            alt="shortly"
-                        />
+                        <img src="assets/images/bai2/logo.svg" alt="shortly" />
                     </div>
-                    <ul class="items-center hidden text-gray-400 lg:flex">
-                        <li class="px-6"><a href="#" class="font-bold hover:text-black">Feature</a></li>
-                        <li class="px-6"><a href="#" class="font-bold hover:text-black">Pricing</a></li>
-                        <li class="px-6"><a href="#" class="font-bold hover:text-black">Resources</a></li>
+                    <ul class="hidden items-center text-gray-400 lg:flex">
+                        <li class="px-6">
+                            <a href="#" class="font-bold hover:text-black"
+                                >Feature</a
+                            >
+                        </li>
+                        <li class="px-6">
+                            <a href="#" class="font-bold hover:text-black"
+                                >Pricing</a
+                            >
+                        </li>
+                        <li class="px-6">
+                            <a href="#" class="font-bold hover:text-black"
+                                >Resources</a
+                            >
+                        </li>
                     </ul>
                 </div>
                 <div class="hidden lg:block">
-                    <a href="#" class="px-6 py-3 text-gray-400 font-bold">Login</a>
-                    <a href="#" class="px-6 btn-get-started">Sign up</a>
+                    <a href="#" class="px-6 py-3 font-bold text-gray-400"
+                        >Login</a
+                    >
+                    <a href="#" class="btn-get-started px-6">Sign up</a>
                 </div>
-                <div class="w-6 h-6 lg:hidden cursor-pointer" id="dropdown">
+                <div class="h-6 w-6 cursor-pointer lg:hidden" id="dropdown">
                     <img
-                        class="block object-cover w-full"
+                        class="block w-full object-cover"
                         id="icon-menu"
                         src="assets/images/bai2/hamburger-menu.svg"
                         alt=""
@@ -38,22 +49,24 @@
                 <div
                     class="absolute top-full left-[50%] hidden w-5/6 translate-x-[-50%] rounded-lg bg-[#3B3054] px-5 py-5 text-center text-white lg:hidden"
                 >
-                    <ul class="border-b rounded-blue-300">
+                    <ul class="rounded-blue-300 border-b">
                         <li class="py-3 sm:py-4"><a href="#">Feature</a></li>
                         <li class="py-3 sm:py-4"><a href="#">Pricing</a></li>
                         <li class="py-3 sm:py-4"><a href="#">Resources</a></li>
                     </ul>
-                    <a href="#" class="block py-3 sm:py-4 ">Login</a>
-                    <a href="#" class="block btn-get-started">Sign up</a>
+                    <a href="#" class="block py-3 sm:py-4">Login</a>
+                    <a href="#" class="btn-get-started block">Sign up</a>
                 </div>
             </header>
         </div>
-        <div class="container pb-20 mx-auto">
+        <div class="container pb-20">
             <div
                 class="flex flex-col-reverse items-center justify-between px-4 py-10 sm:px-0 lg:flex-row lg:py-14"
             >
                 <div class="max-w-md text-center lg:text-left xl:max-w-lg">
-                    <h2 class="mb-4 text-4xl font-bold sm:text-6xl xl:text-7xl md:mb-10">
+                    <h2
+                        class="mb-4 text-4xl font-bold sm:text-6xl md:mb-10 xl:text-7xl"
+                    >
                         More than just shorter links
                     </h2>
                     <p class="mb-6 text-gray-400 lg:max-w-sm">
@@ -70,36 +83,39 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[#F3F4F6] px-4 sm:px-0 inset-x-0 pb-10">
-            <div class="w-6/6 sm:w-5/6 md:w-4/6 relative mx-auto">
+        <div class="inset-x-0 bg-neutral-100 px-4 pb-10 sm:px-0">
+            <div class="w-6/6 relative mx-auto sm:w-5/6 md:w-4/6">
                 <form
                     id="form-short-link"
-                    class="mt-[-40px] inset-x-0 flex-col rounded-lg bg-[#3B3054] px-6 py-6 sm:py-10 sm:px-10 md:flex-row absolute -top-8"
+                    class="absolute inset-x-0 -top-8 mt-[-40px] flex-col rounded-lg bg-[#3B3054] px-6 py-6 sm:py-10 sm:px-10 md:flex-row"
                 >
-                    <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex flex-col gap-4 md:flex-row">
                         <input
                             id="input-url"
                             oninput="isValidHttpUrl(this.value)"
                             onkeydown="isValidHttpUrl(this.value)"
                             type="text"
                             placeholder="shorten a link  here"
-                            class="inline-block px-3 py-3 placeholder-orange-500 outline-none basis-4/5 rounded-xl sm:px-4 sm:py-4"
+                            class="inline-block basis-4/5 rounded-xl px-3 py-3 placeholder-orange-500 outline-none sm:px-4 sm:py-4"
                         />
                         <button
                             type="submit"
-                            class="basis-1/5 rounded-xl bg-[#2ACFCF] px-3 py-3 text-white sm:py-4 sm:px-0 hover:opacity-80"
+                            class="basis-1/5 rounded-xl bg-[#2ACFCF] px-3 py-3 text-white hover:opacity-80 sm:py-4 sm:px-0"
                         >
                             Shorten It!
                         </button>
                     </div>
-                    <p class="text-center md:text-left d-block text-red-600 hidden italic mt-2" id="error-valid"></p>
+                    <p
+                        class="d-block mt-2 hidden text-center italic text-red-600 md:text-left"
+                        id="error-valid"
+                    ></p>
                 </form>
-                <div class="md:pt-28 sm:pt-40 pt-32">
+                <div class="pt-32 sm:pt-40 md:pt-28">
                     <div
-                        class="flex flex-col items-center justify-between px-6 py-6 mb-4 bg-white rounded-lg shadow-lg md:flex-row"
+                        class="mb-4 flex flex-col items-center justify-between rounded-lg bg-white px-6 py-6 shadow-lg md:flex-row"
                     >
                         <p
-                            class="inline-block max-w-full mb-4 overflow-x-scroll font-bold md:mb-0"
+                            class="mb-4 inline-block max-w-full overflow-x-scroll font-bold md:mb-0"
                         >
                             https://tailwindcss.com/docs/top-right-bottom-left
                         </p>
@@ -113,10 +129,10 @@
                         </div>
                     </div>
                     <div
-                        class="flex flex-col items-center justify-between px-6 py-6 mb-4 bg-white rounded-lg shadow-lg md:flex-row"
+                        class="mb-4 flex flex-col items-center justify-between rounded-lg bg-white px-6 py-6 shadow-lg md:flex-row"
                     >
                         <p
-                            class="inline-block max-w-full mb-4 overflow-x-scroll font-bold md:mb-0"
+                            class="mb-4 inline-block max-w-full overflow-x-scroll font-bold md:mb-0"
                         >
                             https://tailwindcss.com/docs/top-right-bottom-left
                         </p>
@@ -130,10 +146,10 @@
                         </div>
                     </div>
                     <div
-                        class="flex flex-col items-center justify-between px-6 py-6 bg-white rounded-lg shadow-lg md:flex-row"
+                        class="flex flex-col items-center justify-between rounded-lg bg-white px-6 py-6 shadow-lg md:flex-row"
                     >
                         <p
-                            class="inline-block max-w-full mb-4 overflow-x-scroll font-bold md:mb-0"
+                            class="mb-4 inline-block max-w-full overflow-x-scroll font-bold md:mb-0"
                         >
                             https://tailwindcss.com/docs/top-right-bottom-left
                         </p>
@@ -149,18 +165,20 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[#F3F4F6]">
-            <div class="container px-4 py-20 mx-auto text-center sm:px-0">
+        <div class="bg-neutral-100">
+            <div class="container px-4 py-20 text-center sm:px-0">
                 <h3 class="mb-4 text-3xl font-medium">Advanded Statistics</h3>
                 <p class="inline-block max-w-md text-gray-400">
                     Lorem Ipsum has been the industry's standard dummy text ever
                     since the 1500s
                 </p>
-                <div class="grid grid-cols-1 gap-10 mt-20 md:grid-cols-3 relative">
+                <div
+                    class="relative mt-20 grid grid-cols-1 gap-10 md:grid-cols-3"
+                >
                     <div
-                        class="relative w-full px-6 pt-20 pb-6 bg-white rounded-lg shadow-md z-20" 
+                        class="relative z-20 w-full rounded-lg bg-white px-6 pt-20 pb-6 shadow-md"
                     >
-                        <h4 class="mb-6 text-lg font-bold text-left">
+                        <h4 class="mb-6 text-left text-lg font-bold">
                             Brand Recognition
                         </h4>
                         <p class="text-left text-gray-400">
@@ -169,7 +187,7 @@
                             took a galley of type and scrambled it
                         </p>
                         <div
-                            class="absolute left-2/4 lg:left-[30%] top-[-28px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%]"
+                            class="absolute left-2/4 top-[-28px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%] lg:left-[30%]"
                         >
                             <img
                                 src="assets/images/bai2/icon-brand-recognition.svg"
@@ -179,9 +197,9 @@
                     </div>
                     <span class="before-line"></span>
                     <div
-                        class="relative w-full px-6 pt-20 pb-6 mt-10 bg-white rounded-lg shadow-md z-20"
+                        class="relative z-20 mt-10 w-full rounded-lg bg-white px-6 pt-20 pb-6 shadow-md"
                     >
-                        <h4 class="mb-6 text-lg font-bold text-left">
+                        <h4 class="mb-6 text-left text-lg font-bold">
                             Detailed Records
                         </h4>
                         <p class="text-left text-gray-400">
@@ -190,7 +208,7 @@
                             took a galley of type and scrambled it
                         </p>
                         <div
-                            class="absolute left-2/4 lg:left-[30%] top-[-28px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%]"
+                            class="absolute left-2/4 top-[-28px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%] lg:left-[30%]"
                         >
                             <img
                                 src="assets/images/bai2/icon-detailed-records.svg"
@@ -200,9 +218,9 @@
                     </div>
                     <span class="after-line"></span>
                     <div
-                        class="relative w-full px-6 pt-20 pb-6 mt-10 md:mt-20 bg-white rounded-lg shadow-md z-20"
+                        class="relative z-20 mt-10 w-full rounded-lg bg-white px-6 pt-20 pb-6 shadow-md md:mt-20"
                     >
-                        <h4 class="mb-6 text-lg font-bold text-left">
+                        <h4 class="mb-6 text-left text-lg font-bold">
                             Fully Customizable
                         </h4>
                         <p class="text-left text-gray-400">
@@ -211,12 +229,12 @@
                             took a galley of type and scrambled it
                         </p>
                         <div
-                            class="absolute left-2/4 lg:left-[30%] top-[-28px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%]"
+                            class="absolute left-2/4 top-[-28px] w-fit translate-x-[-50%] rounded-full bg-black px-4 py-4 md:-translate-x-[180%] lg:left-[30%]"
                         >
                             <img
                                 src="assets/images/bai2/icon-fully-customizable.svg"
                                 alt=""
-                                class="w-[40px] h-[40px]"
+                                class="h-10 w-10"
                             />
                         </div>
                     </div>
@@ -226,20 +244,24 @@
         <div
             class="flex w-full flex-col items-center justify-center bg-[#3B3054] bg-[url('assets/images/bai2/bg-boost-desktop.svg')] bg-cover bg-no-repeat py-14 text-center md:py-32"
         >
-            <p class="mb-8 text-3xl sm:text-4xl font-bold text-white md:text-5xl">
+            <p
+                class="mb-8 text-3xl font-bold text-white sm:text-4xl md:text-5xl"
+            >
                 Boost your links today
             </p>
             <button class="btn-get-started">Get Started</button>
         </div>
         <div class="bg-[#232127] py-16 text-white">
             <div
-                class="container flex flex-col items-center justify-between mx-auto md:items-start md:flex-row"
+                class="container flex flex-col items-center justify-between md:flex-row md:items-start"
             >
                 <div class="mb-10 md:mb-0">
                     <img src="assets/images/bai2/logo.svg" alt="" />
                 </div>
-                <div class="flex flex-col mb-10 md:mb-0 md:flex-row">
-                    <ul class="px-6 mb-10 text-center md:mb-0 lg:px-14 md:text-left">
+                <div class="mb-10 flex flex-col md:mb-0 md:flex-row">
+                    <ul
+                        class="mb-10 px-6 text-center md:mb-0 md:text-left lg:px-14"
+                    >
                         <li class="mb-4 font-bold"><h5>Features</h5></li>
                         <li class="item-footer">
                             <a href="#">Link Shortenting</a>
@@ -251,7 +273,9 @@
                             <a href="#">Analytics</a>
                         </li>
                     </ul>
-                    <ul class="px-6 mb-10 text-center md:mb-0 lg:px-14 md:text-left">
+                    <ul
+                        class="mb-10 px-6 text-center md:mb-0 md:text-left lg:px-14"
+                    >
                         <li class="mb-4 font-bold"><h5>Resources</h5></li>
                         <li class="item-footer">
                             <a href="#">Blog</a>
@@ -263,7 +287,9 @@
                             <a href="#">Support</a>
                         </li>
                     </ul>
-                    <ul class="px-8 mb-10 text-center md:mb-0 lg:px-14 md:text-left">
+                    <ul
+                        class="mb-10 px-8 text-center md:mb-0 md:text-left lg:px-14"
+                    >
                         <li class="mb-4 font-bold"><h5>Company</h5></li>
                         <li class="item-footer">
                             <a href="#">About</a>
