@@ -242,14 +242,21 @@
             </div>
         </div>
         <div
-            class="flex w-full flex-col items-center justify-center bg-[#3B3054] bg-[url('assets/images/bai2/bg-boost-desktop.svg')] bg-cover bg-no-repeat py-14 text-center md:py-32"
+            class="relative flex w-full flex-col items-center justify-center bg-[#3B3054] py-14 text-center md:py-32"
         >
+            <div class="absolute inset-0">
+                <img
+                    src="assets/images/bai2/bg-boost-desktop.svg"
+                    class="block h-full w-full object-cover"
+                    alt=""
+                />
+            </div>
             <p
-                class="mb-8 text-3xl font-bold text-white sm:text-4xl md:text-5xl"
+                class="z-20 mb-8 text-3xl font-bold text-white sm:text-4xl md:text-5xl"
             >
                 Boost your links today
             </p>
-            <button class="btn-get-started">Get Started</button>
+            <button class="btn-get-started z-20">Get Started</button>
         </div>
         <div class="bg-[#232127] py-16 text-white">
             <div
