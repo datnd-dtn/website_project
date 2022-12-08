@@ -48,9 +48,12 @@
     .title-section {
         @apply mb-6 text-center text-3xl font-bold md:text-4xl;
     }
+    .is-open {
+        @apply h-0 max-h-0
+    }
 }
 .rotate-arrow::after {
+    transition: transform 0.4s ease-in-out;
     transform: rotate(180deg);
     top: 0;
-    transition: transform 2s ease-in-out;
 }

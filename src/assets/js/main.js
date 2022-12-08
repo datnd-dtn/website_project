@@ -26,16 +26,13 @@ if (formShortLink) {
 }
 function handleShortLink(e) {
     e.preventDefault();
-    console.log(inputURL.value, 'dd');
     if (inputURL.value == '') {
         errorMess.innerText = 'Please enter something';
         errorMess.classList.add('block');
         errorMess.classList.remove('hidden');
     }
-    console.log(value);
 }
 function isValidHttpUrl(string) {
-    console.log(string);
     let url;
     try {
         url = new URL(string);
@@ -56,7 +53,6 @@ const navMenu = document.querySelector('#menu-hamburger + div.hidden');
 const iconClose = document.querySelector('#icon-close');
 if (menuHamburger) {
     menuHamburger.addEventListener('click', () => {
-        console.log('bai3');
         navMenu.classList.toggle('hidden');
         logo.classList.add('hidden');
         menuHamburger.classList.add('hidden');
@@ -80,7 +76,6 @@ function openTabs(el) {
     var btn = el.currentTarget;
     var electronic = btn.dataset.electronic;
     tabContent.forEach(function (el) {
-        console.log(el);
         el.classList.remove('active');
         el.classList.add('hidden');
     });
@@ -105,7 +100,6 @@ accordionLinks.forEach(function (el) {
 function handleAccordion(el) {
     var accordionLink = el.currentTarget;
     var accordion = accordionLink.dataset.accordion;
-    console.log('ss', accordionLink);
     accordionLink.querySelector('.icon-arrow').classList.toggle('rotate-arrow');
 
     accordionContent.forEach(function (el) {
@@ -119,5 +113,6 @@ function handleAccordion(el) {
         el.classList.remove('active');
     });
 
-    document.querySelector('#' + accordion).classList.toggle('hidden');
+    document.querySelector('#' + accordion).classList.toggle('h-0');
+    document.querySelector('#' + accordion).classList.toggle('max-h-0');
 }
