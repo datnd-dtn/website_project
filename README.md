@@ -1,10 +1,12 @@
-# CREATE LANDING PAGE USING TAILWINDCSS
+# website project tailwind
 
 ## Install
 
+<strong>author: DatNguyen</strong>
+
 <p>
-    <pre><code>git clone https://github.com/thoanngo2/create-landing-page.git
-cd create-landing-page
+    <pre><code>git clone https://github.com/datnd-dtn/website_project.git
+cd website-project
 npm install</code></pre>
 </p>
 
